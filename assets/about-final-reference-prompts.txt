@@ -1,0 +1,6 @@
+Mode: built-in ImageGen edits; transparent_background=true.
+Base paper output: about-paper-no-pin.png
+Edit only one small detail in this transparent collage asset: remove the small black halftone pushpin on the lower-right ivory paper, seamlessly restoring matching blank ivory paper texture. Preserve every other pixel/layout: metal top clip, star, torn paper shape, dotted backing, DESIGNER beads and transparent alpha. No other edits. Same canvas dimensions and composition.
+
+Pin output: about-pin-cutout.png
+Extract ONLY the small black halftone pushpin from lower-right of this collage. A single pushpin isolated on genuine transparent alpha. Preserve same angle, dot-print appearance and shape. Absolutely no ivory paper rectangle, backing, other objects or background. Tight small transparent margin, crisp sticker silhouette.

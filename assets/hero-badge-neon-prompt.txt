@@ -1,0 +1,5 @@
+Mode: built-in ImageGen background extraction; transparent_background=true.
+Source: /Users/polina/Downloads/Неоновый бейдж с Полиной.png
+Output: hero-badge-neon.png
+
+Background extraction ONLY of supplied finished badge artwork. Remove ONLY the light gray exterior background around the rounded rectangular badge and around/inside the silver clip above it. Output genuine transparent alpha. Preserve every interior printed pixel: exact grayscale woman's face, hair, hands, blazer, laptop, white graphic strokes, neon lime POLINA lettering and accent lines, black rounded card and silver clip. Do not redraw, retouch, relight, restyle, distort, regenerate the person or change text. Keep the same front-facing orientation, proportions and composition; full badge and top clip visible. Tight clean anti-aliased cutout, no white fringe. White printed graphics INSIDE the card must remain opaque white.

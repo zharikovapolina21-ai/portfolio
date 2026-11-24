@@ -1,0 +1,8 @@
+Mode: built-in ImageGen; transparent_background=true.
+Final output: web-torn-paper.png
+
+Generation:
+Use case: product-mockup. Asset: background of an existing portfolio website section. Generate a top-down photorealistic scan of one broad WHITE paper sheet torn by hand from a larger sheet. Landscape roughly 3:2 aspect ratio. Entire sheet fills canvas almost edge to edge (no more than 1% margin) with genuine transparent alpha outside. Upper and lower edges are irregular naturally torn with subtle long uneven contours, tiny fibrous wisps and layered cellulose, NOT repeated geometric zigzags, sawtooth points, waves or decorative deckle stamping. Left and right edges may run out to canvas edge. Paper must be white, softly matte, convincingly real paper grain and scattered very shallow creases from handling; mostly flat readable quiet surface, not heavily crumpled aluminum foil. Neutral diffuse lighting, very subtle contact shadow only immediately beneath edges, no backdrop or tabletop. No objects, writing, text, logos or folds casting large dark shadows. Need real photographic paper texture with natural physical hand-ripped edges, not vector, illustration or procedural tiled texture. Keep center bright clean for dark website text. All transparency outside sheet actual alpha.
+
+Exterior background extraction:
+Remove ONLY the gray exterior backdrop from outside this white torn paper sheet. Preserve the sheet and its natural ripped fibrous edges unchanged. Make all pixels OUTSIDE sheet fully transparent alpha, including top margin above torn edge and lower margin below torn edge. No gray background, no fake checkerboard, no shadow rectangle. Keep opaque white paper interior, exact dimensions and shape, no text. This is a clean background extraction.

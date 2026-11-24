@@ -1,0 +1,6 @@
+Mode: built-in ImageGen edits; transparent_background=true.
+Camera output: about-camera-cutout.png
+Extract ONLY the small black halftone retro camera sticker with lime accent dashes from this collage. Remove the large paper backing and every other object, text, clip, beads, star, pin. The camera silhouette and lime dashes must be isolated on genuinely transparent alpha, including transparency between lime marks. No cream or white rectangular paper behind it. Preserve existing camera look, angle and halftone texture. Tight framing around camera sticker, high resolution. Transparent background.
+
+Paper output: about-paper-clean.png
+Edit this collage asset very locally: remove ONLY the halftone camera and its lime dashes from upper-right part of the ivory paper, filling that area seamlessly with matching blank ivory paper fibre texture. All other elements and their exact positions, sizes, outlines and canvas dimensions must stay unchanged: metal clip, star, dotted backing, torn paper, pin and DESIGNER beads. Preserve existing transparent alpha background. Do not add anything.

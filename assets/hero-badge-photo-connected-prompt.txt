@@ -1,0 +1,5 @@
+Mode: built-in ImageGen edit; transparent_background=true.
+Source: hero-badge-photo.png
+Output: hero-badge-photo-connected.png
+
+Precisely edit this existing photographic badge PNG. Fix ONLY the physically incorrect connection between the lobster clasp and the punched hole in the card. The bottom curved metal hook MUST actually pass through the hole: place the hole inside the lower curve of the clasp, with one metal segment going through the opening behind the card and its other segment visible in front, so the card's top bridge is enclosed by the closed clasp. Show realistic occlusion: card edge masks the rear metal segment, foreground metal overlaps front rim, contact shadow at hole. No separate unconnected hole below the clasp. Keep same total object dimensions, alignment, card position and full composition. Preserve the woman's photograph EXACTLY, face, clothing, photo print, all card details, lime symbols, woven lime strap and metal ring unchanged. No restyling. Maintain crisp product photography and genuine transparent alpha background, no matte. This is a localized physical hardware attachment correction.

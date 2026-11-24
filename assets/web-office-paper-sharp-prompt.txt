@@ -1,0 +1,3 @@
+Mode: built-in ImageGen reference edit, transparent_background=true.
+Output: web-office-paper-sharp.png. Actual output: 1536 x 1024 px.
+Restore this exact thin white crumpled torn office paper website background at substantially higher resolution, ideally 3840 x 2560 pixels, at minimum 3072 pixels wide. Preserve exact sheet silhouette, transparency, thin 80gsm A4 paper appearance and creases, no redesign. Improve fine detail and genuine crisp texture: sharply resolved paper grain and crease ridges, naturally thin torn edge, no blur or smeared fibres, no thick handmade pulp. Photographic sharp focus across entire flat sheet. No text or objects, no background; preserve genuine transparent alpha outside sheet. Same landscape framing edge-to-edge, no additional margins.
