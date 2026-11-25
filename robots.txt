@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polina-designer.ru/sitemap.xml
