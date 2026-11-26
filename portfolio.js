@@ -537,3 +537,69 @@ function addMobileSwipe(surface, navigate) {
   }, true);
   surface.querySelectorAll('img').forEach(image => { image.draggable = false; });
 }
+
+// Reveal objects once, keeping their final layout and swipe surfaces intact.
+function setupSmmEntrances() {
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  if (reducedMotion.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  const mobile = matchMedia('(max-width:700px)');
+  const targets = new Map();
+  const running = new Set();
+  const register = (selector, kind, delay = 0) => {
+    document.querySelectorAll(selector).forEach(element => {
+      targets.set(element, {kind, delay});
+      element.classList.add('smm-awaiting-entrance');
+    });
+  };
+  register('#services .section-heading, #services .service-card', 'rise');
+  register('.services-contact', 'rise');
+  // On wider layouts one observer and one animation reveal the entire stage together.
+  // Phones retain the approved separate entrances while scrolling down the page.
+  register(mobile.matches ? '.presentation-intro, .presentation-gallery' : '.presentation-stage', 'rise');
+  register('#web .section-heading, #web .grid > .card', 'rise');
+  register('.smm-fitness .smm-task', 'card');
+  register('.smm-fitness .smm-solution', 'card', 130);
+  register('.smm-digital-grid img', 'rise');
+  register('.smm-rc .smm-brief', 'card');
+  if (mobile.matches) {
+    register('.smm-fitness-phone, .smm-rc-slider', 'rise');
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const element = entry.target;
+      const {kind, delay} = targets.get(element);
+      observer.unobserve(element);
+      element.classList.remove('smm-awaiting-entrance');
+      if (reducedMotion.matches) return;
+      let from = 'translateY(22px)';
+      if (kind === 'card') {
+        const destination = element.getBoundingClientRect();
+        if (mobile.matches) {
+          from = `translateX(${window.innerWidth - destination.left + 24}px)`;
+        } else {
+          const phone = element.closest('.smm-case').querySelector('.smm-fitness-phone, .smm-rc-phone');
+          const source = phone.getBoundingClientRect();
+          const x = Math.max(0, source.left + source.width / 2 - destination.left - destination.width / 2);
+          from = `translateX(${x}px)`;
+        }
+      }
+      const animation = element.animate([
+        {opacity:0, transform:from, offset:0},
+        {opacity:1, transform:'none', offset:1}
+      ], {duration:mobile.matches ? 950 : 1300, delay:mobile.matches ? 0 : delay,
+        easing:'cubic-bezier(.25,.1,.25,1)', fill:'backwards'});
+      running.add(animation);
+      animation.finished.then(() => running.delete(animation), () => running.delete(animation));
+    });
+  }, {threshold:0, rootMargin:'0px 0px -7% 0px'});
+  targets.forEach((_, element) => observer.observe(element));
+  reducedMotion.addEventListener('change', () => {
+    if (!reducedMotion.matches) return;
+    observer.disconnect();
+    targets.forEach((_, element) => element.classList.remove('smm-awaiting-entrance'));
+    running.forEach(animation => animation.cancel());
+  });
+}
+setupSmmEntrances();

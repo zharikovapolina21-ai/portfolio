@@ -2361,3 +2361,8 @@ p,li,nav,.site-footer .footer-identity,.about-note {font-weight:400}
  .hero .hero-description {width:min(475px,38vw)}
  .hero .hero-star {right:14%}
 }
+/* Entrance visibility is enabled only after the SMM observer is ready. */
+.smm-awaiting-entrance {opacity:0}
+@media (prefers-reduced-motion:reduce) {
+  .smm-awaiting-entrance {opacity:1}
+}
